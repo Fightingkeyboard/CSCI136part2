@@ -8,3 +8,4 @@
 3. Tried to stream input from text file. Unsucessful in current iteration.
 4. Does not contain unindent or indent functions.
 5. Functions work.
+6. Added unindent and indent functions.

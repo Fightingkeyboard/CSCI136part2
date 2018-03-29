@@ -32,6 +32,25 @@ int countChar(string line, char c){
 	return o;
 }
 
+string unindent(std::string line){
+ 	string result;
+ 	result += removeLeadingSpaces(line) + "\n";
+ 	return result;
+
+ string indent(){
+ 	int tabs = 0;
+ 	string result;
+ 	string line;
+ 	while (getline(cin, line)){
+ 		line = unindent(line);
+ 		tabs -= countChar(line, '}');
+ 		for (int i = 0; i < tabs; i++){
+ 			result += "\t";
+ 		}
+ 	}
+ 	return result;
+ }
+
 //Trying to read from a file to test? I only inputted from the terminal
 /*
 int main(){
